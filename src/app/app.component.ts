@@ -13,5 +13,13 @@ export class AppComponent  {
   constructor(public watchListService:WatchListService) {
   }
   watchList = this.watchListService.watch_list
+  ngOnInit(){
+    this.watchListService.onSwapUp(0)
+  }
+
+  onSwapUp(index:number){
+    console.log(index)
+    this.watchListService.onSwapUp(index)
+  }
 
 }

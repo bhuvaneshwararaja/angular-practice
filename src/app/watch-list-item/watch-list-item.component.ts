@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'my-watch-list-item',
@@ -10,9 +10,12 @@ export class WatchListItemComponent  {
   @Input() first;
   @Input() last;
   @Input() index;
-
+  @Output() swapUp = new EventEmitter()
   ngOnInit(){
     console.log(this.index)
+  }
+  onSwapUp(index:number){
+    this.swapUp.emit(index)
   }
 
 
