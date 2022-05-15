@@ -12,6 +12,6 @@
   </div>
   <div>
     <i class="material-icons" *ngIf="!first" (click)="onSwapUp(index)">expand_less</i>
-    <i class="material-icons" *ngIf="!last">expand_more</i>
+    <i class="material-icons" *ngIf="!last" (click)="onSwapDown(index)">expand_more</i>
   </div>
 </div>

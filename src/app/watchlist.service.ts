@@ -11,11 +11,21 @@ export class WatchListService{
    }
 
    onSwapUp(index:number){
-      if(index != 0 ){
+      if(index != null ){
         console.log(index)
           var temp = this.watch_list[index]
           this.watch_list[index] = this.watch_list[index-1]
           this.watch_list[index-1] = temp
       }
    }
+
+   onSwapDown(index:number){
+    if(index != null ){
+        var temp = this.watch_list[index]
+        this.watch_list[index] = this.watch_list[index+1]
+        this.watch_list[index+1] = temp
+    }
+ }
+
+ 
 }

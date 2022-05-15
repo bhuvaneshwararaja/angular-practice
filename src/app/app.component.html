@@ -2,8 +2,11 @@
 
 <div>
 
-  <my-watch-list-item *ngFor="let watchlist of watchList;index as i; last as l; first as f" [item]="watchlist" [index]="i" [last]='l' [first]='f' (swapUp)="onSwapUp($event)"></my-watch-list-item>
-  
+  <my-watch-list-item *ngFor="let watchlist of watchList;index as i; last as l; first as f" [item]="watchlist" [index]="i" [last]='l' [first]='f' (swapUp)="onSwapUp($event)" (swapDown)="onSwapDown($event)"></my-watch-list-item>
+<div class="center">
+  <button class="btn btn-primary" (click)="showAll()">{{btnText}}</button>
+  <div>
+
 
 </div>
 

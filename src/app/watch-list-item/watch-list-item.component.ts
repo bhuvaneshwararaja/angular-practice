@@ -11,12 +11,22 @@ export class WatchListItemComponent  {
   @Input() last;
   @Input() index;
   @Output() swapUp = new EventEmitter()
+  @Output() swapDown = new EventEmitter()
+  constructor(){
+    
+  }
+
   ngOnInit(){
     console.log(this.index)
   }
   onSwapUp(index:number){
     this.swapUp.emit(index)
   }
+  onSwapDown(index:number){
+    this.swapDown.emit(index)
+  }
+
+
 
 
 }

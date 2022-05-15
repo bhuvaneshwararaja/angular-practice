@@ -9,3 +9,7 @@ p {
 .movie-panels {
   display:flex; justify-content:space-around;
 }
+
+.center{
+  text-align: center;
+}
