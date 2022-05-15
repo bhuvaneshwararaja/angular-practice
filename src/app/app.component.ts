@@ -15,12 +15,11 @@ export class AppComponent  {
   }
   btnText = "Show All"
   listStatus = false
+  indexedSlice=4
   ngOnInit(){
     
   }
   watchList = this.watchListService.watch_list
-
-  showWatchList = this.watchList.slice(0,4)
 
   onSwapUp(index:number){
     console.log(index)
@@ -32,15 +31,13 @@ export class AppComponent  {
   }
 
   showAll(){
-    var temp = this.watchList
     if(this.listStatus == false){
-        
-        this.showWatchList = temp.slice(0,this.watchList.length-1)
+        this.indexedSlice = this.watchList.length
         this.listStatus = true
         this.btnText = "Hide"
     }
     else{
-      this.showWatchList = temp.slice(0,4)
+      this.indexedSlice = 4
       this.listStatus = false
       this.btnText = "Show All"
 
