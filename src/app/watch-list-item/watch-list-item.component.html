@@ -1,0 +1,17 @@
+<div
+  style="display:flex; justify-content:space-between"
+  class="text-light p-3 rounded mb-2"
+  [ngClass]="item.onSale == true ? 'bg-success' : 'bg-dark'"
+>
+  <div>
+    <div>{{ item.title }}</div>
+    <div>
+      {{ item.price | currency: 'INR':'symbol':'1.1-2' }} <br />
+      {{ item.dateAdded | date: 'longDate' }}
+    </div>
+  </div>
+  <div>
+    <i class="material-icons" *ngIf="!first">expand_less</i>
+    <i class="material-icons" *ngIf="!last">expand_more</i>
+  </div>
+</div>
